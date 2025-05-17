@@ -171,7 +171,7 @@ async def receive_correction(update: Update, context: ContextTypes.DEFAULT_TYPE)
     return ConversationHandler.END
 
 def main():
-    app = ApplicationBuilder().token(TOKEN).build()
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
 
     conv = ConversationHandler(
         entry_points=[MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message)],
